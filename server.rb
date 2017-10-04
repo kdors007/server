@@ -2,7 +2,10 @@ require 'sinatra'
 
 get '/' do 
 	"Hello world"
-
+	# fname = "hello.txt"
+	file = File.open("public/hello.txt", mode="r")
+	contents = file.read
+	contents
 end
 
 get '/blah' do
